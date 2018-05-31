@@ -158,6 +158,7 @@ nav h1 a {
 	display: flex;
 	flex-direction: column;
 	align-content: space-between;
+	margin-bottom: 30px;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
@@ -172,7 +173,6 @@ nav h1 a {
   letter-spacing: 0;
   line-height: 1.1em;
   margin: 20px 0 10px;
-  text-transform: uppercase;
 }
 #restaurants-list p {
   margin: 0;
@@ -185,16 +185,21 @@ nav h1 a {
   font-size: 1.1em;
 	font-weight: 800;
 	letter-spacing: 1px;
-  margin: 15px 0 0;
+  margin: 0px auto;
   padding: 15px 30px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
 	transition: .4s all ease-in-out;
+	width: auto;
 }
 
 #restaurants-list li a:hover {
 	background-color: #119ab9;
+}
+
+.restaurant-info {
+	padding-bottom: 20px;
 }
 
 /* ====================== Restaurant Details ====================== */
@@ -286,4 +291,27 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+@media (max-width: 850px) {
+	#restaurants-list li {
+		flex-basis: 45%;
+	}
+}
+
+@media (max-width: 600px) {
+	#restaurants-list li {
+		flex-basis: 60%;
+		justify-content: center;
+		position: relative;
+    left: 20%;
+	}
+	.filter-options {
+		flex-wrap: wrap;
+	}
+	.filter-options h2 {
+		width: 100%;
+		text-align: center;
+		padding: 10px 0;
+	}
 }
