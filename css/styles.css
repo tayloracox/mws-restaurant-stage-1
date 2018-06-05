@@ -425,6 +425,9 @@ nav h1 a {
 		flex-wrap: wrap;
 		justify-content: center;
 	}
+	#restaurant-address {
+		padding: 0;
+	}
 }
 @media (max-width: 667px) {
 	#restaurants-list li {
