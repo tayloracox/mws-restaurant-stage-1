@@ -22,7 +22,7 @@ a {
 	transition: .4s all ease-in-out;
 }
 a:hover, a:focus {
-	color: #4484ba;
+	color: #2b6ba0;
 	text-decoration: none;
 }
 a img {
@@ -100,7 +100,7 @@ nav h1 a {
 
 /* Add a color on mouse-over */
 #breadcrumb li a:hover {
-  color: #01447e;
+  color: #2b6ba0;
   text-decoration: underline;
 }
 
@@ -156,6 +156,7 @@ nav h1 a {
   margin: 30px 10px 15px;
   min-height: 300px;
   flex-basis: 30%;
+	border-radius: 20px 0 20px 0;
 }
 #restaurants-list .box {
 	display: flex;
@@ -169,6 +170,7 @@ nav h1 a {
   max-width: 100%;
 	min-width: 100%;
   min-height: auto;
+	border-radius: 20px 0 0;
 }
 #restaurants-list li h1 {
   color: #1b3440;
@@ -196,10 +198,11 @@ nav h1 a {
   text-transform: uppercase;
 	transition: .4s all ease-in-out;
 	width: auto;
+	border-radius: 5px;
 }
 
 #restaurants-list li a:hover {
-	background-color: #119ab9;
+	background-color: #2b6ba0;
 }
 
 .restaurant-info {
@@ -290,6 +293,7 @@ nav h1 a {
   padding: 15px;
 	width: calc(90% - 30px);
 	text-transform: uppercase;
+	border-radius: 20px 0 0 0;
 }
 #reviews-list {
   margin: 0;
@@ -304,6 +308,10 @@ nav h1 a {
   overflow: hidden;
   padding: 20px;
 	box-shadow: 2px 2px 10px rgba(0, 0, 0, .1);
+	border-radius: 20px 0 20px 0;
+}
+#reviews-list li:first-child {
+	border-radius: 0 0 20px 0;
 }
 #reviews-list li p {
   margin: 0 0 10px;
@@ -320,6 +328,7 @@ nav h1 a {
   overflow: hidden;
   padding: 20px;
 	box-shadow: 2px 2px 10px rgba(0, 0, 0, .1);
+	border-radius: 0px 0 20px 0;
 }
 #restaurant-hours td {
   color: #1b3440;
@@ -333,6 +342,7 @@ nav h1 a {
 	border-bottom: 2px solid #f3f3f3;
 	padding-bottom: 5px;
 	margin-bottom: 15px;
+	border-radius: 20px 0 0 0;
 }
 .review-name {
 	font-size: 1.1em;
@@ -360,6 +370,7 @@ nav h1 a {
   letter-spacing: 5px;
   padding: 15px;
 	text-transform: uppercase;
+	border-radius: 20px 0 0 0;
 }
 .review-rating {
 	background-color: #f2845c;
