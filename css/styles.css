@@ -394,14 +394,44 @@ nav h1 a {
 	#restaurants-list li {
 		flex-basis: 45%;
 	}
+	#maincontent.indv-restaurant {
+		flex-direction: column;
+		justify-content: center;
+	}
+	.inside #restaurant-container, .inside #map-container {
+		width: 100%;
+		margin: 0;
+	}
+	.inside #map-container {
+		position: relative;
+		order: 0;
+		height: 50vh;
+	}
+	.inside #map {
+		height: 100%;
+	}
+	#restaurant-img, .hours-container {
+		margin: 0px auto;
+	}
+	#restaurant-name {
+		text-align: center;
+		padding-top: 0;
+	}
+	.restaurant-details {
+		justify-content: center;
+	}
+	#reviews-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
-
 @media (max-width: 667px) {
 	#restaurants-list li {
-		flex-basis: 60%;
+		flex-basis: 75%;
 		justify-content: center;
 		position: relative;
-    left: 20%;
+    left: 10%;
 	}
 	.filter-options {
 		flex-wrap: wrap;
@@ -410,5 +440,25 @@ nav h1 a {
 		width: 100%;
 		text-align: center;
 		padding: 10px 0;
+	}
+}
+@media (max-width: 640px) {
+	nav h1 a {
+		font-size: 1.1em;
+		margin: 0;
+	}
+	.inside #footer {
+		width: 86%;
+	}
+	.restaurant-details {
+		flex-direction: column;
+	}
+	#restaurant-cuisine, .review-rating {
+		width: auto;
+	}
+}
+@media (max-width: 568px) {
+	nav h1 a {
+		font-size: 1em;
 	}
 }
