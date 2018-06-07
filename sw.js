@@ -7,6 +7,7 @@ let cacheFiles = [
   './js/main.js'
 ]
 
+// Installs Service Worker
 self.addEventListener('install', function(e) {
   console.log("[ServiceWorker] Installed");
 
@@ -18,6 +19,7 @@ self.addEventListener('install', function(e) {
   )
 })
 
+// Activates Service Worker
 self.addEventListener('activate', function(e) {
   console.log("[ServiceWorker] Activated");
 
@@ -33,6 +35,7 @@ self.addEventListener('activate', function(e) {
   )
 })
 
+// Fetches Service Worker
 self.addEventListener('fetch', function(e) {
   console.log("[ServiceWorker] Fetching", e.request.url);
 })
