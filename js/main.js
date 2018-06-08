@@ -1,8 +1,8 @@
 let restaurants,
   neighborhoods,
   cuisines
-let map
-let markers = []
+var map
+var markers = []
 
 // Fetch neighborhoods and cuisines as soon as the page is loaded
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -10,11 +10,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
   fetchCuisines();
 });
 
-// Fetch all neighborhoods and set their HTML
+//  Fetch all neighborhoods and set their HTML
 fetchNeighborhoods = () => {
   DBHelper.fetchNeighborhoods((error, neighborhoods) => {
-    if (error) {
-      // Error
+    if (error) { // Got an error
       console.error(error);
     } else {
       self.neighborhoods = neighborhoods;
