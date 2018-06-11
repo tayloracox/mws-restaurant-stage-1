@@ -1,4 +1,4 @@
-let cacheName = 'v3';
+let cacheName = 'v5';
 let cacheFiles = [
   './',
   './index.html',
@@ -16,6 +16,8 @@ let cacheFiles = [
   './img/9.jpg',
   './img/10.jpg'
 ]
+
+let offlineResponse = new Response('<h1>You are offline.</h1>', {headers: {'Content-Type': 'text/html'}});
 
 // Installs Service Worker
 self.addEventListener('install', function(e) {
@@ -46,11 +48,22 @@ self.addEventListener('activate', function(e) {
 })
 
 // Fetches Service Worker
-self.addEventListener('fetch', event => {
-  console.log("[ServiceWorker] Fetching"
-  event.respondWith(caches.match(event.request).then(response => {
-    console.log('used cashes')
-    return response || fetch(event.request);
-  })
+self.addEventListener('fetch', function(e){
+  e.respondWith(
+    caches.match(e.request).then(function(response) {
+      if (response) {
+        return response;
+      } else {
+        return fetch(e.request).then(function(response) {
+          let clonedResponse = response.clone();
+          caches.open(cacheName).then(function(cache) {
+            cache.put(e.request, clonedResponse);
+          });
+          return response;
+        }).catch(function() {
+          return offlineResponse;
+        })
+      }
+    })
   )
-})
+});
