@@ -55,10 +55,18 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
 
+  const picture = document.getElementById('pic');
   const image = document.getElementById('restaurant-img');
+  const imageSrc = DBHelper.imageUrlForRestaurant(restaurant);
+  const sourceSmall = document.createElement('source');
+  sourceSmall.media = "(max-width: 600px)";
+  sourceSmall.srcset = imageSrc + "-480w.jpg";
   image.className = 'restaurant-img';
   image.setAttribute('alt', restaurant.alt_text);
-  image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.src = imageSrc + ".jpg";
+  picture.appendChild(sourceSmall);
+  picture.appendChild(image)
+
 
   // Fill operating hours
   if (restaurant.operating_hours) {

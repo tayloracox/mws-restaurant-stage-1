@@ -126,11 +126,18 @@ createRestaurantHTML = (restaurant) => {
 
   li.append(div);
 
+  const picture = document.createElement('picture');
   const image = document.createElement('img');
-  image.className = 'restaurant-img';
+  const imageSrc = DBHelper.imageUrlForRestaurant(restaurant);
+  const sourceSmall = document.createElement('source');
+  sourceSmall.media = "(max-width: 600px)";
+  sourceSmall.srcset = imageSrc + "-480w.jpg";
+  image.className = "restaurant-img";
   image.setAttribute('alt', restaurant.alt_text);
-  image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  div.append(image);
+  image.src = imageSrc + ".jpg";
+  picture.appendChild(sourceSmall);
+  picture.append(image);
+  div.append(picture);
 
   div.append(boxDiv);
 
@@ -167,15 +174,15 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 }
 
 // Load service worker
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker
-        .register('../sw.js', { scope: './'})
-        .then(function(registration) {
-          console.log('Service Worker Registered');
-        })
-        .catch(function(err) {
-          console.log('Service Worker Failed to Register', err);
-        })
-    });
-  }
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker
+      .register('../sw.js', { scope: './'})
+      .then(function(registration) {
+        console.log('Service Worker Registered');
+      })
+      .catch(function(err) {
+        console.log('Service Worker Failed to Register', err);
+      })
+  });
+}
