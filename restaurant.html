@@ -10,20 +10,20 @@
 
   <body class="inside">
     <header>
-      <nav>
-        <h1><a href="/"><strong>Restaurant</strong> Reviews</a></h1>
+      <h1 class="page-title"><a href="/"><strong>Restaurant</strong> Reviews</a></h1>
+      <nav aria-label="breadcrumb">
+        <ul id="breadcrumb">
+          <li><a href="/">Home</a></li>
+        </ul>
       </nav>
-      <ul id="breadcrumb">
-        <li><a href="/">Home</a></li>
-      </ul>
     </header>
 
-    <main id="maincontent" class="indv-restaurant" role="application" aria-label="restaurant location">
+    <main id="maincontent" class="indv-restaurant">
       <section id="map-container">
-        <div id="map"></div>
+        <div id="map" role="application" aria-label="restaurant location"></div>
       </section>
       <section id="restaurant-container">
-        <h1 id="restaurant-name"></h1>
+        <h2 id="restaurant-name"></h2>
         <div class="restaurant-details">
           <p id="restaurant-cuisine"></p>
           <p id="restaurant-address"></p>
@@ -34,7 +34,7 @@
           <h3 id="restaurant-hours-head">Business Hours</h3>
           <table id="restaurant-hours"></table>
         </div>
-        <section id="reviews-container">
+        <section id="reviews-container" aria-label="restaurant reviews">
           <ul id="reviews-list"></ul>
         </section>
       </section>
