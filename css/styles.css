@@ -194,7 +194,7 @@ header,
 	border-radius: 20px 0 0;
 }
 
-#restaurants-list li h1 {
+#restaurants-list li h2 {
   color: #1b3440;
   font-size: 1.5em;
   line-height: 1.1em;
