@@ -23,7 +23,7 @@ let cacheFiles = [
   './img/8-480w.jpg',
   './img/9.jpg',
   './img/9-480w.jpg',
-  './img/10.jpg'
+  './img/10.jpg',
   './img/10-480w.jpg'
 ]
 
