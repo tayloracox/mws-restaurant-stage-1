@@ -24,8 +24,7 @@ let cacheFiles = [
   './img/9.jpg',
   './img/9-480w.jpg',
   './img/10.jpg',
-  './img/10-480w.jpg',
-  `http://localhost:${port}/restaurants`
+  './img/10-480w.jpg'
 ]
 
 let offlineResponse = new Response('<h1>You are offline.</h1>', {headers: {'Content-Type': 'text/html'}});
