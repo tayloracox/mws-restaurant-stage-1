@@ -62,7 +62,12 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   sourceSmall.media = "(max-width: 640px)";
   sourceSmall.srcset = imageSrc + "-480w.jpg";
   image.className = 'restaurant-img';
-  image.setAttribute('alt', restaurant.alt_text);
+  if (restaurant.alt_text != undefined) {
+    image.setAttribute('alt', restaurant.alt_text);
+  } else {
+    image.setAttribute('alt', `Image of ${restuarant.name} Restaurant`);
+  }
+
   image.src = imageSrc + ".jpg";
   picture.appendChild(sourceSmall);
   picture.appendChild(image)
