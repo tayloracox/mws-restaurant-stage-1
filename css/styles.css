@@ -479,10 +479,26 @@ header,
 		flex-basis: 45%;
 	}
 
-	#maincontent.indv-restaurant {
+  #maincontent {
+    display: flex;
+  }
+
+	#maincontent.indv-restaurant, #maincontent {
 		flex-direction: column;
 		justify-content: center;
 	}
+
+  .filter-options {
+    background-color: transparent;
+  }
+
+  .filter-options h2 {
+    color: #1b3440;
+  }
+
+  .filter-options select {
+    border: 1px solid #333;
+  }
 
 	.inside #restaurant-container,
 	.inside #map-container {
@@ -490,9 +506,9 @@ header,
 		margin: 0;
 	}
 
-	.inside #map-container {
+	.inside #map-container, #map-container {
 		position: relative;
-		order: 0;
+		order: 3;
 		height: 50vh;
 	}
 
@@ -513,6 +529,10 @@ header,
 	.restaurant-details {
 		justify-content: center;
 	}
+
+  #pic {
+    text-align: center;
+  }
 
 	#reviews-container {
 		display: flex;
