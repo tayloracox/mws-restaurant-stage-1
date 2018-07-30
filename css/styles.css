@@ -110,6 +110,8 @@ header,
   background-color: #eee;
   font-size: 1.2em;
   margin: 0;
+  position: relative;
+  top: -16px;
 }
 
 #breadcrumb li {
@@ -304,7 +306,7 @@ header,
 #restaurant-cuisine {
   background-color: #f2845c;
   color: #fff;
-	width: 10%;
+	width: auto;
   font-size: .9em;
   font-weight: 700;
   letter-spacing: 2px;
@@ -433,7 +435,7 @@ header,
 .review-rating {
 	background-color: #f2845c;
 	color: #fff;
-	width: 15%;
+	width: auto;
 	font-size: .9em;
 	font-weight: 700;
 	letter-spacing: 2px;
@@ -466,7 +468,7 @@ header,
 .inside #footer {
 	bottom: -130px;
   position: absolute;
-	width: 100%;
+	width: calc(100% - 50px);
 	z-index: 3;
 }
 

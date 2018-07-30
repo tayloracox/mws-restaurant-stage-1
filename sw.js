@@ -1,10 +1,11 @@
-let cacheName = 'v5';
+let cacheName = 'v6';
 let cacheFiles = [
   './',
   './index.html',
   './restaurant.html',
   './css/styles.css',
   './js/main.js',
+  './js/idb.js',
   './img/1.jpg',
   './img/1-480w.jpg',
   './img/2.jpg',
